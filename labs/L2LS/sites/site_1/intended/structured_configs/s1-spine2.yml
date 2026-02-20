@@ -6,7 +6,9 @@ aaa_root:
 banners:
   motd: 'You shall not pass. Unless you are authorized. Then you shall pass.
 
-    EOF'
+    EOF
+
+    '
 config_end: true
 daemon_terminattr:
   cvaddrs:
@@ -118,6 +120,15 @@ local_users:
   sha512_password: $6$arista$CKbO5utC47.4jVUwI1qjkLLTgS3pQzmP4d2Vp3nU5zKI489xSl.iVYo.ZRvJXnm2VBmY99hAsH.cBWIndJHe90
   ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3MRzj5xU2bgAbTiSmZEfL2XNs7ieSK3luYB7Zr1vA2SVtRJEzHjVMkeXRmQMTcmtG2zNotsCN1R0QlcTPcEiUPrCkgTBmqxGYGgA1qGyWFSP8vZDH9XNg/z0F16KQ0xG+Zyk84GkoIEU9U+0buHeJboGGDVcuuoT7dqgoCQY336OwxhRjwnJgTfK1c1N+6dWGs8Qc2foNcSwurHKRtAeHugz3rSUk7B3BZLL/FHBVqlkfGxO+ftJjvHhZxq2Qes4zpByqTDzC6RxdwtMeapfxIjQMZK+H7Bg2E7TZVSLCQaBvGmuljI4REDZJQG2loNUJ6hsBIb03cyeFFjfVrQkn
     arista@melb-auto-workshop-14-2e419c35-eos
+logging:
+  vrfs:
+  - name: default
+    source_interface: Management0
+    hosts:
+    - name: 10.200.0.108
+      protocol: udp
+    - name: 10.200.1.108
+      protocol: udp
 loopback_interfaces:
 - name: Loopback0
   description: ROUTER_ID
